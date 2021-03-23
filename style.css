@@ -40,16 +40,16 @@ body {
 }
 
 .list {
-    margin:0;
+    margin: 0;
     padding: 0px;
 }
 
 .list-item, .list-name {
-    list-style:none;
+    list-style: none;
 }
 
 .inp, .btn{
-    outline:none;
+    outline: none;
 }
 
 .btn {
@@ -162,14 +162,14 @@ body {
 /* Edit Task */
 
 .list .list-item .inp.text {
-    display:none
+    display: none
 }
 
 .list .list-item.edit-mode .inp.text {
-    display:inline-block;
-    width:224px
+    display: inline-block;
+    width: 224px
 }
 
 .list .list-item.edit-mode .task {
-    display:none;
+    display: none;
 }
