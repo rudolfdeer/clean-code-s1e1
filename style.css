@@ -135,7 +135,7 @@ body {
 }
 
 .inp.text:not(:first-child){
-    width: 226px
+    width: 226px;
 }
 
 .delete.btn:hover {
@@ -162,12 +162,12 @@ body {
 /* Edit Task */
 
 .list .list-item .inp.text {
-    display: none
+    display: none;
 }
 
 .list .list-item.edit-mode .inp.text {
     display: inline-block;
-    width: 224px
+    width: 224px;
 }
 
 .list .list-item.edit-mode .task {
