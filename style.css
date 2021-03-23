@@ -44,11 +44,13 @@ body {
     padding: 0px;
 }
 
-.list-item, .list-name {
+.list-item, 
+.list-name {
     list-style: none;
 }
 
-.inp, .btn{
+.inp, 
+.btn {
     outline: none;
 }
 
