@@ -8,47 +8,50 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("todo");//ul of #todo
-var completedTasksHolder=document.getElementById("completed");//completed
+var taskInput=document.getElementById("new-task");
+var addButton=document.getElementsByTagName("button")[0];
+var incompleteTaskHolder=document.getElementById("todo");
+var completedTasksHolder=document.getElementById("completed");
 
 
-//New task list item
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
+    listItem.classList.add("list-item");
 
-    //input (checkbox)
-    var checkBox=document.createElement("input");//checkbx
-    //label
-    var label=document.createElement("label");//label
-    //input (text)
-    var editInput=document.createElement("input");//text
-    //button.edit
-    var editButton=document.createElement("button");//edit button
+    
+    var checkBox=document.createElement("input");
+    checkBox.classList.add("inp");
+    checkBox.classList.add("checkbox");
+    
+    var label=document.createElement("label");
+    label.classList.add("task");
+    
+    var editInput=document.createElement("input");
+    editInput.classList.add("inp");
+    editInput.classList.add("text");
 
-    //button.delete
-    var deleteButton=document.createElement("button");//delete button
+    var editButton=document.createElement("button");
+    editButton.classList.add("edit");
+    editButton.classList.add("btn");
+
+    var deleteButton=document.createElement("button");
+    deleteButton.classList.add("delete");
+    deleteButton.classList.add("btn");
+    
     var deleteButtonImg=document.createElement("img");//delete button image
+    deleteButtonImg.classList.add("delete-btn-icon")
 
     label.innerText=taskString;
-    label.className='task';
 
-    //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
 
-    editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
-
-    deleteButton.innerText="Delete";
-    deleteButton.className="delete";
+    editButton.innerText="Edit"; 
+    
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
-
-    //and appending.
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
     listItem.appendChild(editInput);
@@ -121,6 +124,8 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed
     var listItem=this.parentNode;
+    var label = listItem.children[1];
+    label.classList.add("completed-task");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
