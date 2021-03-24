@@ -12,11 +12,11 @@ body {
     text-align: right;
 }
 
-.header-img {
+.header__img {
     width: 100%;
 }
 
-.header .more-inf {
+.header__inf {
     font-family: fantasy, cursive;
 }
 
@@ -44,12 +44,12 @@ body {
     padding: 0px;
 }
 
-.list-item, 
-.list-name {
+.list__item, 
+.section__name {
     list-style: none;
 }
 
-.inp, 
+.input, 
 .btn {
     outline: none;
 }
@@ -70,8 +70,7 @@ body {
 
 /* Heading */
 
-.list-name,
-.new-task {
+.section__name {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -81,7 +80,7 @@ body {
     text-transform: uppercase;
 }
 
-.inp.text {
+.input.input__text {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -94,38 +93,38 @@ body {
     color: #888;
 }
 
-.inp.text:focus {
+.input.input__text:focus {
     color: #333;
 }
 
 /* New Task */
 
-.new-task {
+.section__name {
     display: block;
     margin: 0 0 20px;
 }
 
-.add-inp {
+.input__text__add {
     width: 318px;
 }
 
-.add .btn:hover {
+.btn__add:hover {
     color: #0fc57c;
 }
 
 /* Task list */
 
-.list-item {
+.list__item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
 }
 
-.list-item > * {
+.list__item > * {
     vertical-align: middle;
 }
 
-.checkbox {
+.input__checkbox {
     margin: 0 10px;
 }
 
@@ -136,42 +135,42 @@ body {
     width: 226px;
 }
 
-.inp.text:not(:first-child){
+.input.input__text:not(:first-child){
     width: 226px;
 }
 
-.delete.btn:hover {
+.btn__delete.btn:hover {
     color: #cf2323;
 }
 
-.delete-btn-icon {
+.delete__icon {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-.delete-btn-icon:hover {
+.delete__icon:hover {
     transform: rotateZ(0);
 }
 
 /* Completed */
 
-.completed-task {
+.task__completed {
     text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
 
-.list .list-item .inp.text {
+.list .list__item .input.input__text {
     display: none;
 }
 
-.list .list-item.edit-mode .inp.text {
+.list .list__item.list__item__edit .input.input__text {
     display: inline-block;
     width: 224px;
 }
 
-.list .list-item.edit-mode .task {
+.list .list__item.list__item__edit .task {
     display: none;
 }
